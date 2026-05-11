@@ -1,15 +1,16 @@
 # Eclipse
+.settings/
 .classpath
 .project
-.settings/
+.factorypath
 
-# Maven
+# Maven build output
 target/
 
-# Spring Boot
+# Spring Boot logs
 *.log
 application-local.properties
 
-# IDE
+# IntelliJ (just in case)
 .idea/
 *.iml
