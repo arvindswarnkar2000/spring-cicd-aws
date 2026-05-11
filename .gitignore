@@ -1,0 +1,15 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Maven
+target/
+
+# Spring Boot
+*.log
+application-local.properties
+
+# IDE
+.idea/
+*.iml
