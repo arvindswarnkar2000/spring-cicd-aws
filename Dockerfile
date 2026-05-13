@@ -1,10 +1,14 @@
-# Use the official OpenJDK 17 image from Docker Hub
-FROM openjdk:17
+# Use Amazon Corretto 17 (actively maintained, optimized for AWS)
+FROM amazoncorretto:17-alpine
+ 
 # Set working directory inside the container
 WORKDIR /app
-# Copy the compiled Java application JAR file into the container
-COPY ./target/course-service.jar /app
-# Expose the port the Spring Boot application will run on
+ 
+# Copy the compiled Spring Boot JAR into the container
+COPY target/course-service.jar app.jar
+ 
+# Expose the port the Spring Boot application runs on
 EXPOSE 8080
-# Command to run the application
-CMD ["java", "-jar", "course-service.jar"]
+ 
+# Run the application
+ENTRYPOINT ["java", "-jar", "app.jar"]
